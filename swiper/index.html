@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .content{
+
+        }
+        li{
+            float: left;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            width: 100vw;
+            height: 100vh;
+        }
+        li img{
+            width: 100%;
+        }
+        .swiper ul{
+            width: 100%;
+            height: 100%;
+            transform: trans;
+        }
+        .swiper{
+            width: 100vm;
+            height: 100vh;
+        }
+        .bg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left: 0;
+        }
+        .bg img {
+            width: 100%;
+            height: 100%;
+            filter:blur(30px) ;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="swiper">
+        <div class="bg">
+            <img src="" alt="">
+        </div>
+        <ul>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+        </ul>
+    </div>
+</div>
+<script>
+   /*
+   程序逻辑：
+    1:设置ul宽度，是所有的li都能横向排列
+       1.1获取ul
+       1.2获取li
+       1.3设置宽度
+    2:给swiper绑定事件
+        2.1获取swiper元素
+        2.2
+
+       */
+   var oUl=document.querySelector("ul");
+   var aLi=document.querySelectorAll("li");
+
+   oUl.style.width = aLi.length+"00%";
+
+   var oSide=document.querySelector(".swiper");
+   oSide.addEventListener("touchstart",touch);
+   oSide.addEventListener("touchmove",touch);
+   oSide.addEventListener("touchend",touch);
+
+   var startPoint;  //开始触摸点
+   var startX;//ul元素当前translate
+   oUl.transform={"translateX":};//存放当前ultranslateX值
+   var translateX;
+   var oBg=document.querySelector(".bg").querySelector("img")
+
+   var data={
+       oUl:document.querySelector("ul"),
+       aLi:document.querySelectorAll("li"),
+       oSide:document.querySelector(".swiper"),
+       oBg:document.querySelector(".bg").querySelector("img")
+   }
+
+
+   function swiper(data) {
+
+
+
+   var  ontouch=false;
+   function touch(e) {
+       var e=window.event||ev;  /*触摸事件*/
+
+       switch (e.type){
+           case "touchstart":
+               if(e.target.parentNode.tagName==="LI"){
+                   startPoint=e.changedTouches[0];//获取触摸的第一个手指头
+                   startX=oUl.transform["translateX"]||0;
+                   ontouch=true;
+               }
+               break;
+           case "touchmove":
+               if (ontouch){
+                   var nowpoint=e.changedTouches[0];//当前手指触摸点x2，y2
+                   var disX=nowpoint.pageX - startPoint.pageX;
+                   translateX=startX-disX;
+                   oUl.transform={"translateX":translateX};
+                   oUl.style.transform="translateX("+translateX+"px)";
+               }
+               break;
+           case "touchend":
+               ontouch=false;
+               var l=oUl.transform["translateX"]||0;
+               l=Math.min(0,1);
+               l=Math.max(-(aLi.length-1)*aLi[0].offsetWidth,1);
+               var num=Math.round(-1/aLi[0].offsetWidth);//到底移动几次
+               translateX=-num*aLi[0].offsetWidth;
+               oUl.transform={"translateX":translateX};
+               oUl.style.transition="0.5s";
+               oUl.style.transform="translateX("+translateX+"px)";
+               oBg.src=aLi[num].children[0].src;
+               break;
+       }
+   }
+
+
+   }
+</script>
+</body>
+</html>
