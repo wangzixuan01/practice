@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .center{
+        width: 400px;
+        height: 400px;
+        background: #ccc;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+<body>
+    <div class="center"></div>
+    <script src="./jquery-3.3.1.js"></script>
+    <script>
+         var menu = [
+    {
+        "type_id": 1,
+        "name": "大菜",
+        "food": [{
+                "food_id": 1,
+                "name": "鱼香肉丝",
+                "price": "10"
+            },	
+            {
+                "food_id": 2,
+                "name": "红烧肉",
+                "price": "11"
+            },
+            {
+                "food_id": 3,
+                "name": "香辣粉",
+                "price": "12"
+            }
+        ]
+    }, {
+        "type_id": 2,
+        "name": "中菜",
+        "food": [{
+                "food_id": 4,
+                "name": "小炒肉",
+                "price": "13"
+            },
+            {
+                "food_id": 5,
+                "name": "云吞",
+                "price": "14"
+            }
+        ]
+    }, {
+        "type_id": 3,
+        "name": "小菜",
+        "food": [{
+                "food_id": 6,
+                "name": "雪糕",
+                "price": "15"
+            },
+            {
+                "food_id": 7,
+                "name": "黄瓜",
+                "price": "16"
+            }
+        ]
+    } 
+];
+for(i=0;i<menu.length;i++){
+    var showList = $("<ul class='" + menu[i].type_id + "'><li class='header'>"+ menu[i].name +"</li></ul>");
+    $(".center").append(showList);
+
+     //data为json数据
+    //parent为要组合成html的容器
+   
+        $.each(menu[i].food, function (index, fatherLi) {//遍历数据集
+            var li1 = $("<li class='" + fatherLi.food_id + "'><span> " +fatherLi.name + "</span><span> " + fatherLi.price + "</span></li>");
+            console.log(li1);
+            $("." + menu[i].type_id +"").append(li1);
+        })
+    }
+    </script>
+</body>
+</html>
