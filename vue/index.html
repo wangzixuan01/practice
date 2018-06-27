@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <!-- <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>-->
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="msg">
+    {{msg}}
+</div>
+</body>
+<script>
+   /* var ym = new Vue({
+        el: '#app',
+        data:{ msg:'aaaa'}
+        });
+*/
+
+    function  V(obj) {
+        for (var p in  obj){
+            if (p=='el'){
+                this['$'+p] = document.querySelector(obj[p]);
+            }else if (p == 'data'){
+                this['$'+p] = obj[p];
+                for(var q in  obj[p]){
+                    this[q] = obj[p][q];
+                }
+            }
+        }
+    }
+    var V = new  V({
+        el:'#app',
+        data:{
+            msg:'aaaa'
+        }
+    });
+</script>
+</html>

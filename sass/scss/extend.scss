@@ -1,0 +1,14 @@
+@import "base";
+body{
+  color: aqua;
+}
+div{
+  @extend body;
+  font-size: 12px;
+}
+$i:4;
+@while $i>0{
+  col-#{$i}{
+    width: 100px;
+  }
+}

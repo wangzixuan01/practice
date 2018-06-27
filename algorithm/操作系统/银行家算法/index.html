@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>银行家算法</title>
+    <link rel="stylesheet" href="banker.css" type="css"/>
+</head>
+<body>
+<div id="center">
+    <h1>银行家算法</h1>
+    <div id="input">
+        请输入进程数：<input type="text" id="t_process" name="t_process"/>
+        <br/>
+        请输入资源数：<input type="text" id="t_resource" name="t_resource" />
+        <br/><br/><br/>
+        <input type="button" id="b_ok" value="确定" name="b_ok" onClick="onClickOK()" />
+        <br/>
+    </div>
+    <div id="d_display" style="display: none;">
+        <div class="d_table" id="d_table"></div>
+        <br /><br />
+        <input type="button" id="b_ok2" value="提交检查" name="b_ok2" onclick="onClickOK2()"/>
+        <!--<input type="button" id="b_ok3" value="请求资源" name="b_ok3" onclick="Banker()" />-->
+        <div class="output" id="output"></div>
+        <div class="output" id="outputlist"></div>
+        <div class="output" id="output2"></div>
+    </div>
+</div>
+</body>
+<script src="banker.js"></script>
+</html>

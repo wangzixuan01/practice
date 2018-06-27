@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    border: 0px;
+}
+#small{
+    width: 400px;
+    height: 400px;
+    float: left;
+    position: relative;
+}
+#small img{
+    width: 400px;
+    height: 400px;
+    display: block;
+    float: left;
+}
+#drag{
+    background: #AEADAE;
+    width :200px;
+    height: 200px;
+    float: left;
+    position: absolute;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    cursor: pointer;
+    display: none;
+}
+#big {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    float: left;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

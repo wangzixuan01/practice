@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+            background: red;
+        }
+        .font{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+<p :class="{red:isRed,font:isFont}">rrrrrrrrrr</p>
+<p  :class="[classA,classB]">ppppp</p>
+<p :class="classObj">fffffffff</p>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            p:'p1111',
+            pp:'sdadsdsss',
+            isRed:false,
+            isFont:true,
+            classObj:{
+                red:true,
+                font:false
+            },
+            classA:'red',
+            classB:'font'
+        }
+    })
+</script>
+</html>

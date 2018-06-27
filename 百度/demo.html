@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            text-align: left;
+        }
+        body{
+            text-align: center;
+        }
+        img{
+            margin-top: 100px;
+        }
+        #text{
+            width: 300px;
+            height: 30px;
+        }
+        #btn{
+            width: 100px;
+            height: 30px;
+        }
+        .keyword{
+            display: none;
+            width: 300px;
+            margin-left: 370px;
+            background: #d2e5ff;
+        }
+    </style>
+</head>
+<body>
+<div><img src="1.png" alt=""></div>
+<input type="text" id="text">
+<input type="submit" value="百度一下" id="btn">
+<div class="keyword">
+    <ul>
+    </ul>
+</div>
+</body>
+<script>
+    var oText = document.getElementById("text"),
+        oKey = document.getElementsByClassName("keyword")[0];
+        oUl = oKey.getElementsByTagName("ul")[0];
+    oText.onkeyup = function () {
+         var val = this.value;  //获取文本框内容
+
+          oKey.style.display = val.length!=0?"block":"none";
+          var script = document.createElement("script");
+          script.src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+ val +"&cb=wangzi";
+          document.body.appendChild(script);
+    };
+    function wangzi(data) {
+        console.log(data.s);
+        oUl.innerHTML= '';
+        data.s.forEach(function(el) {
+            var oLi = document.createElement("li");
+            oLi.innerHTML="<a href='https://www.baidu.com/s?wd="+el +"'>"+ el +"</a>";
+            console.log(oLi);
+            oUl.appendChild(oLi);
+        })
+    }
+</script>
+</html>

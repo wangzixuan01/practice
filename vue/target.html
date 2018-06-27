@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <button @click="fn(1,2)">click</button>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+        },
+        methods:{
+            fn:function (a,b) {
+                console.log(a,b,event.target)
+            },
+        }
+    })
+</script>
+</html>

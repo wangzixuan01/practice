@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #msg{
+            background: #00ff00;
+            border: 3px solid #ff0000;
+        }
+         #container{
+             margin: 0 auto;
+         }
+    </style>
+</head>
+<body>
+<div>
+    <button type="button" id="bigger">放大</button>
+    <button type="button" id="smaller">缩小</button>
+</div>
+<div id="container">
+    <textarea name="comment" id="msg" cols="30" rows="10">多地市民在睡梦中被摇醒，目前余震不断，由于地震发生时正是清晨时间，好多民众在睡梦中被“摇醒”，还有市民跑出房屋躲避，有市民称地震持续时间10秒左右。据介绍，这是精河县近年来发生的最大一次地震，目前，当地余震不断，暂无人员伤亡报告。
+    </textarea>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    var $msg=$("#msg")
+    $(function () {
+        $("#bigger").on("click",function () {
+            if(!$msg.is(":animated")){
+                if($msg.height()<1000){
+                    $msg.animate({ height :"+=50"}, 400)    /*“+=”：当前基础上加50*/
+                }
+            }
+        })
+        $("#smaller").on("click",function () {
+            if(!$msg.is(":animated")){
+                if($msg.height()>50){
+                    $msg.animate({height:"-=50"},400)
+                }
+            }
+
+        })
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

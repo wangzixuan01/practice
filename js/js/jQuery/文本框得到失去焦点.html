@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .focus{
+            border: 2px solid #ff0000;
+            background: #00ff00;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>文本框得到失去焦点</legend>
+        <div>
+        <label for="usename">用户名&nbsp&nbsp&nbsp&nbsp</label>
+        <input type="text"id="usename">
+        </div> <br>
+        <div>
+        <label for="password">密码&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+        <input type="password" id="password">
+        </div> <br>
+        <div>
+        <label for="details">详细信息</label>
+        <input type="text" id="details">
+        </div> <br>
+    </fieldset>
+</form>
+<script src="jquery-1.12.4.js"></script>
+<script>
+$(function () {
+    $(":input").on("focus",function () {
+        $(this).addClass("focus")
+    })
+    $(":input").on("blur",function () {
+        $(this).parent().children("input").removeClass("focus")
+    })
+})
+</script>
+</body>
+</html>

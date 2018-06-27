@@ -1,0 +1,13 @@
+@mixin test($c,$b){
+  color: $c;
+  font-size: $b;
+}
+body{
+  @include test($c:#000000,$b:12px)
+}
+ul{
+  @include  test(#fff,14px);
+}
+li{
+  @include  test(#fff,14px);
+}

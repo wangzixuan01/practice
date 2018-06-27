@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="购物车/jquery-1.12.4.js"></script>
+</head>
+<body>
+<div id="shopping_cart">
+    <button id="btn-add">添加商品</button>
+    <div id="product_list">
+        <table id="list">
+            <thead>
+            <tr>
+                <th></th>
+                <th>商品图片</th>
+                <th>商品信息</th>
+                <th>赠品</th>
+                <th>商品金额</th>
+                <th>商品数量</th>
+                <th>总金额</th>
+                <th>编辑</th>
+            </tr>
+            </thead>
+            <tbody id="all_product">
+
+            </tbody>
+            <tfoot>
+            <td colspan="6">
+
+            </td>
+            <td>
+                总计：<span id="total">0</span>
+            </td>
+            <td>
+                <button>结账</button>
+            </td>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<script>
+    $(function () {
+        var html = '<tr>'
+                   +'<td><input type="checkbox"></td>'
+                   +'<td><img src="$src" alt="" width="100"></td>'
+                   +'<td>$name</td>'
+                   +'<td>'
+                   +'<ul>$parts'
+                   +'</ul>'
+                   +'</td>'
+                   +'<td class="price">$productPrice</td>'
+                   +'<td>'
+                   +'<button class="sub">-</button>'
+                   +'<input type="text" value="$sum">'
+                   +'<button class="add">+</button>'
+                   +'</td>'
+                   +'<td class="total-price">$totalPrice</td>'
+                   +'<td>'+'<a href="javascript:;" class="del">删除</a>'
+                   +'</td>'
+                   +'</tr>';
+        $.get('购物车/cart.json',{},function (data) {
+           var  productList = data.result.productList;
+           for(var i=0;i<productList.length;i++){
+               var result = html.replace('$src',productList[i].productImg).replace('$name',productList[i].productName)
+                   .replace('$productPrice',productList[i].productPrice).replace('$sum',productList[i].productQuentity)
+                   .replace('$totalPrice',productList[i].productPrice*productList[i].productQuentity);
+               var htmlLi = '';
+               productList[i].parts.forEach(function (val) {
+                   htmlLi += '<li>'+val.partsName+'</li>'
+               });
+               result = result.replace('$parts',htmlLi);
+               $('#all_product').append(result);
+           }
+
+        },'json');
+        $('#all_product').on('click','.add',function () {
+            var $num = $(this).prev();
+            $num.val(parseInt($num.val())+1);
+            $(this).parents('tr').find('.total-price').text($(this).parents('tr')).find(('.price').text()*$num.val());
+        })
+    })
+</script>
+</body>
+</html>

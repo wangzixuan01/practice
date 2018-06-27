@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            list-style:none;
+            font-size:20px;
+        }
+        .main{
+            display: block;
+            float: left;
+            text-align: center;
+            background: #999999;
+            margin-left: 30px;
+        }
+       ul{
+           padding: 0px;
+           margin: 0px;
+       }
+     a{
+         text-decoration: none;
+         color: #000;
+     }
+        .main1{
+            background-image: url(img/down.gif);
+            background-repeat: no-repeat;
+            background-position: left 8px;
+            float: left;
+        }
+        .main li a{
+            background-image: none;
+        }
+        #nav{
+            background: #000000;
+        }
+        .menu{
+            display: none;
+        }
+        li>a{
+            display: block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="nav">
+    <li class="main1 main"><a href="#">菜单项1</a>
+        <ul class="menu first">
+            <li><a href="www.qq.com">子菜单11</a></li>
+            <li><a href="#">子菜单12</a></li>
+            <li><a href="#">子菜单13</a></li>
+        </ul>
+    </li>
+    <li class="main2 main"><a href="#">菜单项2</a>
+        <ul class="menu second">
+           <li><a href="#">子菜单21</a></li>
+           <li><a href="#">子菜单22</a></li>
+           <li><a href="#">子菜单23</a></li>
+        </ul>
+    </li>
+    <li class="main3 main"><a href="#">菜单项3</a>
+        <ul class="menu thrid">
+         <li><a href="#">子菜单31</a></li>
+         <li><a href="#">子菜单32</a></li>
+         <li><a href="#">子菜单33</a></li>
+        </ul>
+    </li>
+</div>
+</body>
+<script src="../jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        var $main1=$(".main1")
+        $main1.on("mouseover",function () {
+              $(".first").css("display","block")
+        })
+        $main1.on("mouseout",function () {
+            $(".first").css("display","none")
+        })
+    })
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

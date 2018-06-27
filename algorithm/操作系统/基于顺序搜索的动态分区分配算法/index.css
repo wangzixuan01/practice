@@ -1,0 +1,40 @@
+7 *{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+	list-style:none;
+}
+
+#text{
+    width:150px;
+    height: 50px;
+    
+}
+
+.btn{
+	height:50px;
+    width:100px;
+}
+
+div{
+    margin-top: 100px;
+}
+
+#Table{
+	border: 2px;
+    border-bottom:  2px solid black;
+    border-collapse: collapse;
+
+}
+
+
+
+.busy{
+    width:30px;
+    background:#5BC0DE;
+    /*#00BFFF;*/
+
+}
+

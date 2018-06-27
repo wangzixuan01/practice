@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="ssss"></div>
+</body>
+<script>
+    var ss = getByClass("ssss");
+    ss.style=("background","#000000");
+    function getByClass(className,context) {
+        var reg = new RegExp('\\b'+className+ '\\b');
+     context = context || document;
+     if (context.getElementsByClassName){
+         return context.getElementsByClassName(className);
+     }else{
+         var result = [];
+         var arr = context.getElementsByTagName("*");
+         for (var i = 0;i<arr.length;i++){
+             if (reg.test(arr[i].className)){
+                 result.push(arr[i]);
+             }
+         }
+         return result
+     }
+    }
+</script>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<script>-->
+<!--//    1．随机生成两个小数给变量x.y，然后显示这两个数中的最大值。（提示：语句“var x=Math.random();”可为变量生成一个随机小数：另外，使用条件运算符‘'?:")-->
+    <!--var x= Math.random();-->
+    <!--var y= Math.random();-->
+    <!--z=Math.max(x,y)-->
+    <!--alert(z)-->
+<!--</script>-->
+<!--<script>-->
+    <!--var x= Math.random();-->
+    <!--var y= Math.random();-->
+    <!--var iMax = (x > y) ? x : y;-->
+    <!--alert(iMax)-->
+<!--</script>-->
+<!--<script>-->
+<!--//&lt;!&ndash;2．如果某年的年份值是4的倍数并且不是100的倍数，或者该年份值是400的倍数，那么这一年就是闰年。请编制一个页面，该页面显示当天是否处于闰年。&ndash;&gt;-->
+<!--//&lt;!&ndash;提示：使用以下语句，可使变量year的值就是当天所属的年份值。&ndash;&gt;-->
+<!--//&lt;!&ndash;var today = new Date();   //获取当天日期&ndash;&gt;-->
+<!--//&lt;!&ndash;var year = today.getFullYear();   //获取当天年份&ndash;&gt;-->
+
+     <!--var today=new Date()-->
+    <!--var year = today.getFullYear;-->
+    <!--function lepyear() {-->
+        <!--if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {-->
+            <!--return true;-->
+        <!--}-->
+        <!--return false;-->
+    <!--}-->
+        <!--alert(lepyear())-->
+<!--</script>-->
+<!--<script>-->
+<!--//    1.	编写程序．通过用户输入的年龄判断是哪个年龄段的人（儿童：年龄＜14；青少年：14<=年龄＜24；青年：24<年龄＜40; 中年：40＜=年龄＜60; 老年：年龄>=60），并在页面上输出判断结果。-->
+   <!--var age=window.prompt("请输入年龄");-->
+    <!--if (age<14){-->
+       <!--alert("儿童")-->
+    <!--}-->
+<!--else if(age>=14&&age<24){-->
+        <!--alert("青少年")-->
+    <!--}-->
+<!--</script>-->
+<!--<script>-->
+<!--//    2.	编写程序，艰据用户输入的一个数字(0~6)．通过警示对话框显示对应的星期几(0: 星期日; 1: 星期一;……6: 星期六;)。-->
+    <!--var number=prompt("请输入数字");-->
+    <!--switch (number){-->
+        <!--case"0":alert("星期日");-->
+        <!--case "1":alert("星期一");-->
+
+    <!--}-->
+
+<!--</script>-->
+<!--3.	编写程序，计算10!(即 1*2*3＊·…10）的结果(10的阶乘)。-->
+<!--<script>-->
+   <!--var n;-->
+   <!--n=prompt("输入值")-->
+    <!--function jiechen(n) {-->
+       <!--if(n<=1){-->
+           <!--return 1;-->
+       <!--}-->
+        <!--else-->
+            <!--return jiechen(n-1)*n;-->
+    <!--}-->
+    <!--alert(jiechen(n))-->
+<!--</script>-->
+<!--<script>-->
+<!--//    4.	编写程序，计算 1!+2!+3!+…..＋10！的结果。-->
+<!--//    var n =prompt("输入值")-->
+<!--//    function jiechenhe(n) {-->
+<!--//        if(n=1){-->
+<!--//            return 1;-->
+<!--//        }-->
+<!--//       else-->
+<!--//           return (jiechenhe(n-1)*n+jiechenhe(n-2)*(n-1));-->
+<!--//    }-->
+<!--//    alert(jiechenhe(n))-->
+    <!--var fac_sum,fac,i;-->
+    <!--var n =prompt("输入n");-->
+    <!--fac_sum=0;-->
+    <!--fac=1;-->
+    <!--if(i=1,i<n,i++){-->
+        <!--fac *=i;-->
+        <!--fac_sum +=fac;-->
+    <!--}-->
+    <!--alert( + fac_sum);-->
+
+<!--</script>-->
+<!--<script language=javascript>-->
+    <!--&lt;!&ndash;-->
+    <!--var sum_fac,fac,i;-->
+    <!--var n=prompt("请输入n")-->
+    <!--sum_fac=0;-->
+    <!--fac=1;-->
+    <!--for(i=1;i<=n;i++)-->
+    <!--{-->
+        <!--fac *= i;-->
+        <!--sum_fac += fac;-->
+    <!--}-->
+    <!--alert("值为" + sum_fac);-->
+    <!--//&ndash;&gt;-->
+<!--</script>-->
+<!--<script>-->
+<!--//    5.	在页面上输出如下数字图案。-->
+<!--//    1-->
+<!--//    1 2-->
+<!--//    1 2 3-->
+<!--//    1 2 3 4-->
+<!--//    1 2 3 4 5-->
+<!--//    其中，每行的数字之间有一个空格间隔。-->
+<!--var i,line;-->
+<!--var n=prompt("输入行")-->
+<!--for(line=1;line<=n;line++)-->
+<!--{-->
+    <!--document.write("    ");-->
+    <!--for(i=1;i<=line;i++)-->
+    <!--{-->
+        <!--document.write(i);-->
+        <!--if (i>0) document.write(" ");-->
+    <!--}-->
+    <!--document.write("<br>");-->
+<!--}-->
+
+
+<!--</script>-->
+<!--<script>-->
+<!--//    6.	在页面上输出如下图案。-->
+<!--//-->
+<!--//    其中，每行的星号"*"之间有一个空格间隔。-->
+    <!--var i,line;-->
+    <!--var n=prompt("输入行")-->
+<!--var i,line;-->
+<!--for(line=1;line<=n;line++)-->
+<!--{-->
+    <!--document.write("    ");-->
+    <!--for(i=1;i<=n-line;i++) document.write(" ");-->
+    <!--for(i=1;i<=line;i++)-->
+    <!--{-->
+        <!--document.write("*");-->
+        <!--if (i>0) document.write(" ");-->
+    <!--}-->
+    <!--document.write("<br>");-->
+<!--}-->
+<!--//&ndash;&gt;-->
+<!--</script>-->
+
+
+<!--//</script>-->
+<script>
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

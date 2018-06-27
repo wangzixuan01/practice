@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <p :style="{background:bgColor,fontSize:fs}">qqqqqqqqqq</p>
+    <p :style="styleObj">aaaaaaaa</p>
+    <p :style="[styleA,styleB]">bbbbbbb</p>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            styleA:{
+                background:'red',
+                color:'green'
+            },
+            styleB:{
+                'font-size':'40px'
+            },
+            styleObj:{
+                background:'red',
+                color:'green'
+            },
+            bgColor:'red',
+            fs:'40px'
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+   /* class User{
+        constructor(aa){
+            this.aa = aa;
+        }
+        static say(){
+            console.log(11111);
+        }
+    }
+    User.say();*/
+
+   var arr = [1,2,3,4,5,4,3,5,7,8,4,2,5,3];
+   var arr2 = [];
+   function  fn(array) {
+       for(i=0;i<array.length;i++){
+          for(j=array.length;j>0;j--){
+              if(array[i]==array[j]){
+                  array[i]=array[j];
+                  arr2.push(array[i])
+              }
+          }
+           console.log(arr2)
+       }
+   }
+   fn(arr);
+</script>
+</html>

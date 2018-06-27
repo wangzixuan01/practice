@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset = "utf-8" >
+    <script type = "text/javascript" >
+        var onBodyClickFn = function() {
+            alert("我是body上事件");
+        }
+        window.onload = function() {
+            var body = document.body;
+            body.addEventListener('click', onBodyClickFn, false); // false 冒泡阶段
+            //停止事件冒泡
+            document.getElementById("stopBubble").addEventListener("click",
+                function(event) {
+                    alert("我是stopBubble_btn上事件");
+                    event.stopPropagation();
+                },
+                false);
+
+            //正常事件冒泡
+            document.getElementById("bubble").addEventListener("click",
+                function() {
+                    alert("我是bubble_btn上事件");
+                },
+                false);
+        }; </script>
+        </head >
+<body>
+    <button id = 'stopBubble' > 阻止冒泡 < /button>
+    <button id="bubble">正常事件冒泡</button >
+</body>
+</html>

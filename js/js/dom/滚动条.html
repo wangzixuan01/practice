@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚动条</title>
+    <style>
+        #getTop{
+            width: 60px;
+            height: 60px;
+            background: #00ff00;
+            text-align: center;
+            line-height:300%;
+            position: fixed;
+            right: 30px;
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<p style="height: 2000px">hahahahah</p>
+<div id="getTop">
+    go
+</div>
+<script>
+    var getTop = document.getElementById("getTop")
+    getTop.onclick = function () {
+        var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+        var timer =setInterval(function (){
+            window.scrollTo(0,scrollTop-=10);
+            if(scrollTop<=0){
+                clearInterval(timer);
+            }
+        } ,30)
+
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

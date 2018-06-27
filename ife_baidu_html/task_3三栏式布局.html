@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三栏式布局</title>
+    <link rel="stylesheet" href="css/task_3.css">
+</head>
+<body>
+<div id="wrap">
+    <div id="left">
+        <div class="teamLogo">团队logo<br>80*80</div>
+        <p>团队名称</p>
+    </div>
+    <div id="center">
+        <p>叠加外边距
+            垂直方向上的外边距会叠加(重叠），直到一个元素的外边距碰到另一个元素的边框为止。
+            水平相邻的元素，它们的水平间距是相邻外边距之和。
+            外边距的单位
+            为文本元素设置外边距时通常需要混合使用不同的单位
+            左右边距使用像素，使文本始终和包含元素边界保持固定间距
+            上下外边距以em为单位，让段间距随字号变化而响应增大或缩小
+            盒模型结论一：没有宽度(没有设置width)的元素始终会扩展到填满其父元素的宽度为止。
+            添加水平边框、内边框和外边框，会导致内容宽度减少，减少量等于水平边框、内边框和外边框的和。
+            如果不设置块级元素的width属性，那么这个属性的默认值是auto,结果会让元素的宽度扩展到与父元素同宽。
+            </p>
+    </div>
+    <ul id="right">
+        <li>个人logo<br> 80*80</li>
+        <li>个人logo<br> 80*80</li>
+        <li>个人logo<br> 80*80</li>
+        <li>个人logo<br> 80*80</li>
+    </ul>
+</div>
+</body>
+</html>

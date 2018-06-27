@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <demo1>
+        <p slot="title1">ppppppp</p>
+        <p slot="title">aaaaaaaaa</p>
+    </demo1>
+</div>
+</body>
+<script src="vue.js"></script>
+<script type="text/x-template" id="temp">
+    <div>
+        <slot name="title">
+            <h1>默认值</h1>
+        </slot>
+        <slot name="title1">
+            <h1>我是默认值2</h1>
+        </slot>
+    </div>
+</script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            a:'aaaa',
+            b:'bbbb'
+        },
+        components:{
+            demo1:{
+                template:'#temp',
+                props:['myMsg','msg2']
+            }
+        }
+    })
+</script>
+</html>

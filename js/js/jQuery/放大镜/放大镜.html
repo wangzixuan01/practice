@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <link rel="stylesheet" href="放大镜.css">
+</head>
+<body>
+<div id="small">
+    <img src="1.jpg" alt="">
+    <div id="drag"></div>
+</div>
+<div id="big">
+    <img src="2.jpg" alt="">
+</div>
+<script>
+    function getById(id) {
+        return document.getElementById(id)
+    }
+    var oSmall=getById("small")
+    var oDrag=getById("drag")
+    var obig=getById("big")
+    oSmall.onmouseover=function () {
+        oDrag.style.display="block"
+        obig.style.display="block"
+    }
+    oSmall.onmouseout=function () {
+        oDrag.style.display="none"
+        obig.style.display="none"
+    }
+    oSmall.onmousemove=function (e) {
+        e=e||window.event
+        var top=e.clientY-oDrag.offsetWidth/2;
+        var left=e.clientX-oDrag.offsetWidth/2;
+        if (top<0){
+            top=0;
+        }
+        if (left<0)
+        {
+            left=0;
+        }
+        var Ymax= oSmall.offsetWidth - oDrag.offsetWidth;
+        var Xmax= oSmall.offsetHeight - oDrag.offsetHeight;
+        if (top>Ymax){
+            top=Ymax;
+        }
+        if (left>Xmax){
+            left=Xmax;
+            }
+        oDrag.style.top=top + "px";
+        oDrag.style.left=left+"px";
+    }
+//    设置大图片的位置
+       var fScaleX= left / Xmax  ;
+       var fScaleY= top / Ymax ;
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

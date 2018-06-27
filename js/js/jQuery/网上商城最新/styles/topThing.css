@@ -1,0 +1,73 @@
+#bigAD{
+    width: 550px;
+    height: 320px;
+    float: left;
+    margin: 0px 11px;
+    position: relative;
+    background: #D49AE1;
+}
+#changeAD{
+    width: 550px;
+    height: 42px;
+    float: left;
+    position: absolute;
+    top: 279px;;
+    background: #C00000;
+}
+#changeAD a{
+    display: block;
+    text-decoration: none;
+    margin-right: 1px;
+    width: 109px;
+    height: 42px;
+    float: left;
+    background: #999999;
+    color: #ffffff;
+}
+#changeAD a em{
+    display: block;
+    width: 108px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    font-style: normal;
+    text-align: center;
+}
+#activity a{
+    float: right;
+    position: absolute;
+}
+#actText{
+    float: left;
+    width: 230px;
+    height: 135px;
+    position: relative;
+    top: -137px;
+    right: -570px;
+    border: 1px solid #EEEEEE;
+}
+#actLi li{
+    width: 179.03px;
+    height: 20px;
+    float: left;
+    position: relative;
+    left: 18px;
+    top: 4px;
+}
+#actLi{
+    width: 230px;
+    height: 106px;
+    padding: 0px;
+    display: block;
+}
+#actText h2{
+    width: 230px;
+    font-size: 18px;
+    height: 25px;
+    border-bottom: 1px solid #EEEEEE;
+}
+#actLi li a{
+    text-decoration: none;
+    color: #666666;
+    font-size: 12px;
+}

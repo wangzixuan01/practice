@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .heart3D{
+            width: 100px;;
+            height: 160px;
+            border: 2px solid red;
+            margin: 100px auto;
+            border-left: 0;
+            border-bottom: 0;
+            border-radius: 50% 50% 0/40% 50% 0;
+            transform: rotateZ(45deg);
+        }
+    </style>
+</head>
+<body>
+<div class="heart3D" ></div>
+<script>
+    var heart3D=document.getElementById("heart3D")[0];
+    for (var i=0;i<36;i++){
+        var  oDiv=document.createElement("div");
+        oDiv.className="heart";
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<demo1 v-bind:msg="a"></demo1>
+    <demo1 :msg="b"></demo1>
+</div>
+</body>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+             a:'aaaaaaaaaa',
+             b:'bbbbbbbbbb'
+        },
+        components:{
+            demo1:{
+                template:'<h1>{{msg}}</h1>',
+                props:['msg']
+            }
+        }
+    })
+</script>
+</html>
+
+<!--标签不区分大小写-->

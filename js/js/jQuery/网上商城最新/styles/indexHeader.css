@@ -1,0 +1,182 @@
+*{
+    margin: 0px;
+    list-style: none;
+}
+#contWidth{
+    width: 990px;
+    height: 105px;
+    margin: 0px auto;
+}
+#searchGoods{
+    margin: 0px;
+    width: 214px;
+    height: 27px;
+}
+#headerImg{
+    float: left;
+    margin: 0px;
+    width: 158px;
+    height: 59px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+
+}
+#header{
+    background:#ededed ;
+}
+#form{
+    float: left;
+    width: 216px;
+    height: 31px;
+    position: relative;
+    top: 20px;
+    left: 60px;
+}
+#changebox{
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+#changebox li{
+    float: left;
+    background-image:url("../images/theme.gif") ;
+    display: block;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    text-indent: -999999px;
+    cursor: pointer;
+    margin-right: 4px;
+}
+#skin_1{
+    background-position: 0 0;
+}
+#skin_2{
+    background-position: 15px 0px;
+}
+#skin_3{
+    background-position: 35px 0px;
+}
+#skin_4{
+     background-position: 55px 0px;
+}
+#skin_5{
+    background-position: 75px 0px;
+}
+#skin_6{
+    background-position: 95px 0px;
+}
+#skin_1.selected{
+    background-position: 0 15px;
+}
+#skin_2.selected{
+    background-position: 15px 15px;
+}
+#skin_3.selected{
+    background-position: 35px 15px;
+}
+#skin_4.selected{
+    background-position: 55px 15px;
+}
+#skin_5.selected{
+    background-position: 75px 15px;
+}
+#skin_6.selected{
+    background-position: 95px 15px;
+}
+/*换肤结束*/
+/*导航开始*/
+#nav{
+    width: 990px;
+    height: 37px;
+    position: relative;
+    top: 68px;
+}
+#nav ul>li{
+    margin-right: 20px;
+    margin-top: 8px;
+    float: left;
+}
+#nav-main{
+    padding: 0px;
+    width: 337.7px;
+    height: 36.8px;
+    overflow: hidden;
+    left: 20px;
+    position: absolute;
+}
+#nav-main li a{
+    font-weight: 700;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+#nav{
+    background: #405fa1;
+}
+#trademark{
+    float: left;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
